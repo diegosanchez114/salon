@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row"> 
+        <ng-container *ngFor="let item of datos">
+            <div class="col-lg-4 col-md-6 col-sm-12" style="width: 20rem;" *ngIf="item.estado=='Activo'">
+                <a routerLink="/detallado/{{item._id}}"><img src="{{item.imagen}}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <h5 class="card-title">{{item.nombre}}</h5>
+                  <h6 class="card-title">{{item.precio | currency}}</h6>
+                  <p class="card-text">{{item.descripcion}}</p>
+                  <a routerLink="/detallado/{{item._id}}" class="btn btn-primary">Comprar</a>                  
+                </div>
+              </div>
+        </ng-container>       
+    </div>
+</div>
+<app-footer></app-footer>

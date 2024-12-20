@@ -1,0 +1,65 @@
+
+<app-menu-lateral></app-menu-lateral>
+<div id="areaDeTrabajo">
+    <h4>Servicios</h4>
+    <button type="button" class="btn btn-primary" (click)="Nuevo()">Nuevo</button>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Codigo</th>
+            <th scope="col">Nombre</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let item of datos">
+                <tr (click)="EditarId(item._id)">
+                    <th >{{item.codigo}}</th>
+                    <td>{{item.nombre}}</td>
+                </tr>
+            </ng-container>
+          
+          
+        </tbody>
+      </table>
+      
+      
+</div>
+
+
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nuevo servicio</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+          
+          <div class="form-group">
+            <label for="codigo" class="col-form-label">Codigo:</label>
+            <input type="text" class="form-control" id="codigo" [(ngModel)]= "codigo" [disabled]="idseleccionado != ''">
+          </div>
+          <div class="form-group">
+            <label for="nombre" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" [(ngModel)]= "nombre">
+          </div>
+     </div>
+
+      <div class="modal-footer">
+        <button type="button" *ngIf="idseleccionado != ''"  class="btn btn-danger" (click)="Eliminar()">Eliminar</button>
+        <button type="button" *ngIf="idseleccionado != ''"class="btn btn-primary" (click)="Actualizar()">Actualizar</button>
+        <button type="button" *ngIf="idseleccionado == ''"class="btn btn-primary" (click)="Guardar()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,18 @@
+<div id="barrasuperior"></div>
+<div id="menu">
+    <div id="logoempresa">
+        <img src="assets/logo2.jpg" alt="">
+    </div>
+    <div id="datosusuario">
+        <!-- <img src="assets/logo.jpg" alt=""> -->
+        <div id="nombre">{{nombre}}</div>
+        <div id="rol">{{rol}}</div>
+    </div>
+    <div id="opciones">
+        <div class="itemmenu" routerLink="/dashboard">DashBoard</div>
+        <div class="itemmenu" routerLink="/usuarios">Usuarios</div>
+        <div class="itemmenu" routerLink="/productos">Productos</div>
+        <div class="itemmenu" routerLink="/servicios">Servicios</div>
+        <div class="itemmenu" (click)="Logout()">Logout</div>
+    </div>
+</div>

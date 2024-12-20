@@ -1,0 +1,38 @@
+div#logoempresa img{
+    width:65px;
+    border-radius: 70%;
+    margin-top: 21px;
+    margin-bottom: 21px;
+}
+
+div#menu{
+    background: #e9ecef;
+    width: 172px;
+    height: 100vh;
+    float:left
+}
+
+div#datosusuario img {
+    width: 46px;
+    border-radius: 50%;
+    height: 100vh;
+    float: left;
+}
+
+div#opciones {
+    margin-top: 15px;
+}
+
+.itemmenu {
+    margin-bottom: 18px;
+    font-size: 19px;
+    margin-left: 11px;
+    cursor: pointer;
+}
+
+
+div#barrasuperior {
+    width: 100%;
+    background: #e9ecef;
+    height: 39px;
+}

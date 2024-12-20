@@ -1,0 +1,53 @@
+
+
+<app-header></app-header>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-4">
+
+        </div>
+        <div class="col-12 col-sm-12 col-md-4">
+            <div class= "contenedor">
+                <br>
+                <h2 style="text-align: center;">Registra tus datos</h2><br>
+                <div class="form-group">                    
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre">
+                    <small id="nameHelp" class="form-text text-muted">Ingresa tus Nombres</small>
+                    </div>
+                    <!-- <div class="form-group">                    
+                    <label for="exampleInputEmail1">Apellidos</label>
+                    <input type="text" class="form-control" id="exampleInputName">
+                    <small id="emailHelp" class="form-text text-muted">Ingresa tus Apellidos</small>
+                    </div> -->
+                    
+                <div class="form-group">                    
+                    <label for="email">Correo electronico</label>
+                    <input type="email" class="form-control" id="email" [(ngModel)]="email">
+                    <small id="emailHelp" class="form-text text-muted">Ingresa tu correo electronico</small>
+                </div>
+                <div class="form-group">                    
+                    <label for="telefono">Telefono</label>
+                    <input type="number" class="form-control" id="telefono" [(ngModel)]="telefono">
+                    <small id="telefonoHelp" class="form-text text-muted">Ingresa tus numero de telefono o celular</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="password">
+                </div>
+                <!-- <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Desea recibir notificaciones</label>
+                </div> -->
+                <button type="submit" class="btn btn-primary" style="text-align: center;" (click)="Registrar()">Guardar</button>
+                <br>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+<app-footer></app-footer>
+

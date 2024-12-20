@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+div#areaDeTrabajo {
+    float: right;
+    width: calc(100% - 176px);
+    height: 100vh;
+    overflow-y: auto;
+}
