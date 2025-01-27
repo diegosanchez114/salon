@@ -3,13 +3,17 @@ import { MenuLateralComponent } from '../menu-lateral/menu-lateral.component';
 import { PeticionService } from '../../servicios/peticion.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from "@angular/router/testing";
+import { HttpClientModule } from '@angular/common/http';
+
+
 declare var $: any
 declare var Swal: any
 
 @Component({
   selector: 'app-usuarios',
   standalone: true,
-  imports: [MenuLateralComponent, CommonModule, FormsModule],
+  imports: [MenuLateralComponent, CommonModule, FormsModule, RouterTestingModule, HttpClientModule],
   templateUrl: './usuarios.component.html',
   styleUrl: './usuarios.component.css'
 })

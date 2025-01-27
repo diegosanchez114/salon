@@ -3,13 +3,15 @@ import { MenuLateralComponent } from '../menu-lateral/menu-lateral.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PeticionService } from '../../servicios/peticion.service';
+import { RouterTestingModule } from "@angular/router/testing";
+
 declare var $: any
 declare var Swal: any
 
 @Component({
   selector: 'app-productos',
   standalone: true,
-  imports: [MenuLateralComponent, CommonModule, FormsModule],
+  imports: [MenuLateralComponent, CommonModule, FormsModule, RouterTestingModule],
   templateUrl: './productos.component.html',
   styleUrl: './productos.component.css'
 })

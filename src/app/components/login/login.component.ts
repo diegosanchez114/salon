@@ -4,13 +4,16 @@ import { FooterComponent } from '../footer/footer.component';
 import { PeticionService } from '../../servicios/peticion.service';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+import { RouterTestingModule } from "@angular/router/testing";
+import { HttpClientModule } from '@angular/common/http';
+
 
 declare var Swal: any
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, FormsModule],
+  imports: [HeaderComponent, FooterComponent, FormsModule, RouterTestingModule, HttpClientModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

@@ -4,13 +4,15 @@ import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PeticionService } from '../../servicios/peticion.service';
+import { RouterTestingModule } from "@angular/router/testing";
+import { HttpClientModule } from '@angular/common/http';
 
 
 declare var Swal: any
 @Component({
   selector: 'app-activar',
   standalone: true,
-  imports: [FormsModule, FooterComponent, HeaderComponent],
+  imports: [FormsModule, FooterComponent, HeaderComponent, RouterTestingModule, HttpClientModule],
   templateUrl: './activar.component.html',
   styleUrl: './activar.component.css'
 })

@@ -4,13 +4,16 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { ProductosComponent } from '../productos/productos.component';
 import { Router, RouterModule } from '@angular/router';
 import { PeticionService } from '../../servicios/peticion.service';
+import { RouterTestingModule } from "@angular/router/testing";
+import { HttpClientModule } from '@angular/common/http';
+
 
 declare var Swal: any
 
 @Component({
   selector: 'app-menu-lateral',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, RouterTestingModule, HttpClientModule],
   templateUrl: './menu-lateral.component.html',
   styleUrl: './menu-lateral.component.css'
 })

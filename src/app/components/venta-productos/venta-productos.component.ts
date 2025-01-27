@@ -4,12 +4,14 @@ import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { RouterTestingModule } from "@angular/router/testing";
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
   selector: 'app-venta-productos',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, CommonModule, RouterModule],
+  imports: [HeaderComponent, FooterComponent, CommonModule, RouterModule, RouterTestingModule, HttpClientModule],
   templateUrl: './venta-productos.component.html',
   styleUrl: './venta-productos.component.css'
 })

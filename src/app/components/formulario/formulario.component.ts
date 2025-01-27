@@ -4,6 +4,10 @@ import { FooterComponent } from '../footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { ModalComponent } from '../modal/modal.component';
 import { PeticionService } from '../../servicios/peticion.service';
+import { RouterTestingModule } from "@angular/router/testing";
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 
 declare var Swal: any
@@ -11,7 +15,7 @@ declare var Swal: any
 @Component({
   selector: 'app-formulario',
   standalone: true,
-  imports: [HeaderComponent,FooterComponent, FormsModule],
+  imports: [HeaderComponent,FooterComponent, FormsModule, RouterTestingModule, HttpClientModule],
   templateUrl: './formulario.component.html',
   styleUrl: './formulario.component.css'
 })

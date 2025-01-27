@@ -3,11 +3,13 @@ import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ActivatedRoute } from '@angular/router';
 import { PeticionService } from '../../servicios/peticion.service';
+import { RouterTestingHarness, RouterTestingModule } from "@angular/router/testing";
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-detallado',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent],
+  imports: [HeaderComponent, FooterComponent, RouterTestingModule, HttpClientModule],
   templateUrl: './detallado.component.html',
   styleUrl: './detallado.component.css'
 })
